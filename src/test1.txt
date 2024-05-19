@@ -1,0 +1,10 @@
+assume (n :: *)
+assume (z :: n)
+assume (s :: n -> n)
+
+let id = z :: n
+id
+let zero = (\f x -> x) :: (n -> n) -> (n -> n)
+zero
+let n0 = zero s z
+n0

@@ -1,0 +1,13 @@
+assume (n :: *)
+assume (z :: n)
+assume (s :: n -> n)
+
+let var1 = z
+var1
+let var2 = s
+var2
+
+let var4 = z :: n
+var4
+let var5 = s :: n -> n
+var5

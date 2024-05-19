@@ -1,0 +1,32 @@
+putStrLn "natural numbers"
+-- natural numbers  
+assume (n :: *)
+-- zero element
+assume (z :: n)
+-- successor element
+assume (s :: n -> n)
+
+
+let id = z :: n
+id
+-- churn numerals
+let zero = (\f x -> x)    :: (n -> n) -> (n -> n)
+zero
+let one = (\f x -> (f x)) :: (n -> n) -> (n -> n)
+one
+let two = (\f x -> (f (f x))) :: (n -> n) -> (n -> n)
+two
+-- just numbers
+let n0 = zero s z
+n0
+let n1 = one s z
+n1
+let n2 = two s z
+n2
+-- church addition
+let add = (\m n -> ((\f x -> m f (n f x)) :: (n -> n) -> (n -> n))) :: ((n -> n) -> (n -> n)) -> ((n -> n) -> (n -> n)) -> ((n -> n) -> (n -> n))
+add
+let three = add one two
+three
+let n3 = three s z
+n3

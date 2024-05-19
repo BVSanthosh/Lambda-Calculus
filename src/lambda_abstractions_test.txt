@@ -1,0 +1,10 @@
+assume (n :: *)
+
+let fun1 = (\x -> x) :: (n -> n)
+fun1
+let fun2 = (\x y z -> x y z) :: (n -> n -> n)
+fun2
+let fun3 = (\x -> \y -> y) :: (n -> n -> n)
+fun3
+let fun3 = (\x -> \y -> \z -> y) :: (n -> n -> n -> n)
+fun3

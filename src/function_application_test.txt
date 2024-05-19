@@ -1,0 +1,21 @@
+assume (n :: *)
+assume (a :: n)
+assume (b :: n)
+assume (c :: n)
+
+let fun1 = (\x -> x) :: (n -> n)
+fun1
+let app1 = fun1 a 
+app1
+let fun2 = (\x y z -> x y z) :: (n -> n -> n)
+fun2
+let app2 = fun2 a b c
+app2
+let fun3 = (\x -> \y -> y) :: (n -> n -> n)
+fun3
+let app3 = fun3 a b 
+app3
+let fun4 = (\x -> \y -> \z -> z) :: (n -> n -> n -> n)
+fun4
+let app4 = fun4 a b c 
+app4
